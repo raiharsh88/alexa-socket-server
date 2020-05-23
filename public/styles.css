@@ -20,3 +20,10 @@
   justify-content: center;
   border: grey solid 2px;
 }
+
+.chatBox {
+  border: solid grey 1px;
+  width: 200px;
+  height: auto;
+  margin: 50px;
+}
