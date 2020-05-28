@@ -20,16 +20,18 @@ app.get("/auth", (req, res) => {
 
 //Send the authrization token
 app.post("/auth", (req, res) => {
+  console.log(req.body);
+
   res.send({ res: "submitted" });
 });
 
 //get authentication request
-app.get("/auth", (req, res) => {
+app.get("/auth/oa", (req, res) => {
   res.send({ res: "you getted auth data" });
 });
 //post authentication request;
 
-app.post("/auth", (req, res) => {
+app.post("/auth/oa", (req, res) => {
   console.log(req.body);
   res.send({ res: "you posted auth data" });
 });
