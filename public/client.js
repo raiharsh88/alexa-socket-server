@@ -5,7 +5,7 @@ $(document).ready(function () {
     let msg = $("input").val();
     $("input").val("");
 
-    socket.emit("data", msg + " msg");
+    socket.emit("data", msg);
   });
 
   socket.on("connection", () => {
