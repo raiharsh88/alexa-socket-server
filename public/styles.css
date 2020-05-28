@@ -1,29 +1,58 @@
 .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-box {
+  align-self: center;
+
+  display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.box {
-  align-self: center;
-  height: 100vh;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.floor {
-  height: 80px;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 50px 5px rgb(121, 121, 121);
+  border: none;
+  border-radius: 32px;
+  padding: 10px 30px;
   text-align: center;
-  justify-content: center;
-  border: grey solid 2px;
+  width: 32%;
 }
 
-.chatBox {
-  border: solid grey 1px;
-  width: 200px;
-  height: auto;
-  margin: 50px;
+form {
+  padding: 15px 40px 45px 40px;
+
+  display: flex;
+  flex-direction: column;
+  color: teal;
+}
+
+button {
+  padding: 17px 35px;
+  align-self: center;
+  text-align: center;
+  font-size: 1em;
+  margin: 18px 0px 0px 0px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  background-color: teal;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input[name="username"],
+input[type="password"] {
+  padding: 15px 60px 15px 60px;
+  margin: 10px;
+  outline: none;
+  border: 1px solid teal;
+  border-radius: 10px;
+  background-color: white;
+  color: grey;
+  font-size: 1.3rem;
+  text-align: center;
 }

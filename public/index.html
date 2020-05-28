@@ -1,46 +1,28 @@
-<!-- https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Elevator</title>
 
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-    <script src="client.js"></script>
   </head>
   <body>
-    <input type="text" />
-    <button>send</button>
-
     <div class="container">
-      <div class="box">
-        <div class="floor chatBox">
-          <h1>Building</h1>
-        </div>
-        <div class="floor 5f">
-          <h1>5</h1>
-        </div>
-        <div class="floor 4f">
-          <h1>4</h1>
-        </div>
-        <div class="floor 3f">
-          <h1>3</h1>
-        </div>
-        <div class="floor 2f">
-          <h1>2</h1>
-        </div>
-        <div class="floor 1f">
-          <h1>1</h1>
-        </div>
-        <div class="floor Gf">
-          <h1>G</h1>
-        </div>
+      <div class="login-box">
+        <form action="/auth" method="POST">
+          <h1>Login</h1>
+
+          <input type="text" name="username" id="" placeholder="username" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+          />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </body>
