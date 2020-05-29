@@ -1,18 +1,24 @@
 $(document).ready(function () {
-  var socket = io("http://localhost:3000");
+  const queryString = window.location.search;
+  const uri = window.location.href;
+  console.log("URI is ", uri);
 
-  $("button").click(function () {
-    let msg = $("input").val();
-    $("input").val("");
+  const urlParams = new URLSearchParams(queryString);
 
-    socket.emit("data", msg);
+  let parameters = {};
+
+  for (let [key, value] of urlParams.entries()) {
+    parameters[key] = value;
+  }
+
+  $("#submit").click(function (e) {
+    e.preventDefault();
+    let request = $.post("/auth", parameters);
+
+    request.done(function (data) {
+      console.log(data);
+    });
   });
 
-  socket.on("connection", () => {
-    console.log("connected");
-  });
-
-  socket.on("data", function (data) {
-    console.log(data, " This is data");
-  });
+  console.log(parameters); //Take out once deployed;
 });
