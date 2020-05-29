@@ -29,7 +29,7 @@ app.post("/auth", (req, res) => {
   let data = req.body;
 
   let state = data.state;
-  let code = "5678thisismysamplecodetoverify5678";
+  let code = "Q70Y3A";
   data.redirect_uri += "?state=" + state + "&code=" + code;
 
   res.redirect(data.redirect_uri);
